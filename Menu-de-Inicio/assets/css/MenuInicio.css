@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(161, 78, 142, 0.371);
+    background-image: url('/ImagenFondo/cerrar-sobre-fondo-rompecabezas_23-2149289216.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 60%;
+}
+/* rgba(125, 16, 242, 0.748) */
+.contenedor-mensajeSeleccion{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mensajeSeleccion{
+    padding: 10px;
+    margin-top: 15px; margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #1aa7e3a9;
+    ;
+}
+
+/* div dentro de id #puzzle */
+#instrucciones{
+    display: none;
+}
+
+.contenedor-info-estadisticas-usuarios{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-info-estadisticas-usuarios #puzzle{
+    justify-content: left;
+}
+
+.contenedor-info-estadisticas-usuarios #resultados{
+    justify-content: center;
+}
+
+.contenedor-info-estadisticas-usuarios #creacion-seleccionusuarios{
+    justify-content: right;
+}
+
+#puzzle, #creacion-seleccionusuarios {
+    height: 300px; 
+    overflow: auto; 
+    border-radius: 50px;
+}
+
+#puzzle{
+    width: 33%;
+    padding: 50px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#resultados, #nuevoJuego, #continuarJuego{
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+    min-height: 50px; 
+}
+
+#resultados{
+    height: 100px; /*Ajusta la altura fija según tus necesidades*/
+    /* height: auto; esto se hace desde el javascript en el boton btnResultados*/
+    /* se añadio lo de mostrar y ocultar usuarios existentes en las funciones: 
+    function mostrarUsuario() y seleccionarUsuario */
+    overflow-y: auto; /* Agrega un desplazamiento vertical si el contenido excede la altura */
+}
+
+
+#btnResultados{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#creacion-seleccionusuarios{
+    width: 33%;
+    padding: 50px;
+    margin: 15px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-btns-nuevo-continuar{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Diseño de la tabla */
+.contenedor-Tabla{
+    width: 600px;
+    height: 400px;
+    margin: 150px auto;
+    overflow-y: auto;
+}
+
+#tablaResultados{
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    /* siguiente linea es para quitar el padding entre celdas */
+    border-collapse: collapse;
+}
+
+th, td{
+    /* espacio entre celdas */
+    padding: 20px;
+}
+
+thead{
+    background-color: #246355;
+    color: white;
+    border-bottom: solid 5px #0F362D;
+}
+
+/* iluminar filas pares */
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+/* resaltar cuando se pase el cursor y que solo elimine los td no los th*/
+tr:hover td{
+    background-color: #369681;
+    color: white;
+}
+
+/* Estilos del texto */
+h1{
+    margin-bottom: 1.1em;
+}
+
+
+h2 {
+    text-align: center;
+    color:black;
+    margin-bottom: 1.1em;
+}
+
+p{
+    margin: 1.1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    border-color: #6f42c1;
+}
+
+button,
+input[type="submit"],
+a.button {
+    display: flex;
+    padding: 10px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #6f42c1; 
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+a.button:hover {
+    background-color: #1d0fe6; 
+}
+
+.user-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* mensajes emergentes */
+#mensajeRegistro, #registroExitoso, #mensajeNuevoJuego, #mensajeMovimientosUsuarioActual{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1aa7e3a9;
+    border: 2px solid #333333;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333333;
+    border-radius: 10px;
+    display: none;
+}
+
+#usersContainer{
+    display: block;
+}
+

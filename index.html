@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incio de juego</title>
+    <!-- <link rel="stylesheet" href="./assets/css/MenuInicio.css"> -->
+    <link rel="stylesheet" href="./Menu-de-Inicio/assets/css/MenuInicio.css">
+
+</head>
+<body>
+
+    <div class="contenedor-mensajeSeleccion">
+        <div id="mensajeSeleccion"></div>
+    </div>
+
+    <div class="contenedor-info-estadisticas-usuarios">
+        <section id="puzzle">
+            <h1>PUZZLE DESLIZANTE</h1>
+            <p>El puzzle deslizante es un juego donde debes deslizar piezas para reorganizar una imagen desordenada. 
+                Usa un espacio vacío para mover las piezas y resolver el puzzle. Ideal para ejercitar la concentración 
+                y la resolución de problemas.
+            </P>
+            <button id="btnInstrucciones"> Ver instrucciones</button>
+    
+            <div id="instrucciones">
+                <h4>
+                    Inicio: Comienza con la imagen desordenada y un espacio vacío.
+                    <br>Movimiento: Haz clic o toca las piezas adyacentes al espacio vacío para deslizarlas hacia él.
+                    <br>Objetivo: Reorganiza las piezas para formar la imagen original.
+                    <br>Estrategia: Planifica tus movimientos para resolver el puzzle de manera eficiente.
+                    <br>Finalización: Completa la imagen para terminar el juego.
+                </h4>
+            </div>
+        </section>
+
+        <section id="resultados">
+            <button id="btnResultados">Ver Resultados</button>
+            <div id="contenedor-Tabla">
+                <table id="tablaResultados"></table>
+            </div>
+        </section>
+
+        <section id="creacion-seleccionusuarios">
+            <h2>Creacion Usuarios.</h2>
+            <form id = "singupForm">
+                <label>Nickname:</label>
+                <input type="text" placeholder="Escribe tu Nickname" id="name" required autofocus>
+                <input type="submit" value="Crear Usuario">
+                <p>Ya tienes un Nickname? Accede a el</p>
+                <button type="button" id="btnVerUsuarios">Usuarios existentes</button>
+            </form>
+            <div id="usersContainer"></div>
+        </section>
+    </div>
+
+    <div class="contenedor-btns-nuevo-continuar">
+        <section id="nuevoJuego">
+            <button id="btnNuevoJuego">Nuevo Juego</button>
+        </section>
+
+        <section id="continuarJuego">
+            <button id="btnContinuarJuego">Continuar Juego</button>
+        </section>
+    </div>
+    
+    <div id="mensajeRegistro"></div>
+    <div id="registroExitoso"></div>
+    <div id="mensajeNuevoJuego"></div>
+    <div id="mensajeMovimientosUsuarioActual"></div>
+
+    <!-- <script src="./js/MenuInicio.js"></script> -->
+    <script src="./Menu-de-Inicio/js/MenuInicio.js"></script>
+</body>
+</html>

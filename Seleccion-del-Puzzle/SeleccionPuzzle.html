@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elija una Imagen</title>
+    <link rel="stylesheet" href="./css/SeleccionPuzzle.css">
+</head>
+<body>
+
+    <button id="regresarmenuprincipal">Regresar Menu Principal</button>
+    <h1>Galería de Imágenes</h1>
+    <button id="btnElegirImagen">Elegir Imagen</button>
+
+    <div id="contenedorImg">
+        <img class="imgs" src="./img/img1.jpg" alt="1">
+        <img class="imgs" src="./img/img2.jpg" alt="1">
+        <img class="imgs" src="./img/img3.jpg" alt="1">
+        <img class="imgs" src="./img/img4.jpeg" alt="1">
+    </div>
+
+    <div class="contenedor-general">
+        <div class="ctn-imgSelec-Seleccion">
+            <div id="contenedor-imagenSeleccionada"></div>
+
+            <div class="contenedor-Seleccion">
+                <p>Seleccione el numero de Filas y Columnas para su PUZZLE.</p>
+                <div class="select-wrapper">
+                    <select id="seleccionPuzzle">
+                        <option>Seleccione una opcion</option>
+                        <option value="3">3x3</option>
+                        <option value="4">4x4</option>
+                        <option value="5">5x5</option>
+                    </select>
+                    <button id="btnDividir">Generar cuadricula</button>
+                </div>
+            </div>
+        
+            <div class="contenedor-btn-crearpuzzle">
+                <button id="btncrearpuzzle">Crear Puzzle</button>
+            </div>
+        </div>
+        <div id="imagencuadricula"></div>
+        <divi id="mensajesSeleccionTamano"></div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="./js/SeleccionPuzzle.js"></script>
+</body>
+</html>

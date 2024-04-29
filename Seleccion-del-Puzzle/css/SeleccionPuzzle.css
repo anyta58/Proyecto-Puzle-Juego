@@ -1,0 +1,203 @@
+.imgs{
+    margin-right: 10px; 
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contenedorImg{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eed8e5;
+    padding: 20px;
+}
+  
+h1 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+  
+button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #bb00ff;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #0077b3;
+}
+  
+p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+  
+select {
+    display: block;
+    margin: 0 0 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+  
+#contenedorPuzzle {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.grid-line {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* Evitar que las líneas interfieran con los clics en la imagen */
+    z-index: 1; /* Asegurar que las líneas estén sobre la imagen */
+}
+
+#contenedor-imagenSeleccionada{
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+
+#contenedor-imagenSeleccionada img {
+    width: 100%;
+    height: 100%;
+}
+
+#imagencuadricula{
+    width: 500px;
+    height: 500px;
+    display: none;
+}
+
+#imagencuadricula * {
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-general{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-Seleccion{
+    display: none;
+}
+
+.contenedor-btn-crearpuzzle{
+    display: none;
+}
+
+#canvas {
+    width: 100px;
+    height: 100px;
+}
+
+.span-pieza{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.pieza-individual .span-pieza{
+    z-index: 1;
+    position: absolute;    /* No se como pero asi si funciona jaja*/
+}
+
+.pieza{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pieza-individual .pieza{
+    width: 100%; /* Ajustar la imagen al tamaño del contenedor */
+    height: 100%;
+    padding: 5px; /* Agregar un padding para simular la separación */
+    box-sizing: border-box; /* Incluir el padding en el tamaño total del elemento */
+}
+
+/* CAMBIAR EL BOTON ENVIAR QUE VIENE POR DEFECTO EN EL SUBMIT */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#seleccionPuzzle::-ms-expand {
+    display: none;
+}
+
+#seleccionPuzzle {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilo del botón de envío personalizado */
+#seleccionPuzzle::after {
+    content: 'Generar cuadricula';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* CREO QUE ESTO ANTERIOR YA NO SIRVE */
+#btnDividir {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#mensajesSeleccionTamano{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1aa7e3a9;
+    border: 2px solid #333333;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333333;
+    border-radius: 10px;
+    display: none;
+}

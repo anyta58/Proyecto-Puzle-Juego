@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Deslizante</title>
+    <link rel="stylesheet" href="./assets/css/JuegoPuzzle.css">
+    <link rel="icon" href="./assets/images/logo.png">
+    <!-- linea anterior es para el icono de la pagina -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <!-- esta linea anterior es para el confeti -->
+</head>
+
+<body>
+
+    <div class="contenedor-juego">
+        <div class="tableroContainer">
+            <div class="tablero"></div>
+            <!-- inicialmente tablero esta vacio y es por eso que no aparece en el html -->
+        </div>
+        
+        <div class="info-ayuda-juego">
+
+            <section class="contenedor-temporizador">
+                <span class="temporizador">Temporizador: 0</span>
+            </section>
+
+            <div class="btns-juego">
+                <button class="btnsInd" id="reiniciar">Reiniciar</button>
+                <button class="btnsInd" id="verPuzzle">Ver Puzzle</button>
+                <button class="btnsInd" id="numAyuda">Ver Numeros de Ayuda</button>
+                <button class="btnsInd" id="regMen">Regresar Menu Principal</button>
+            </div>
+
+            <section class="contenedor-movimiento">
+                <span class="movimientos">Movimientos Realizados: 0</span>
+            </section>
+        </div>
+
+    </div>
+
+    <section class="primera-pantalla">
+        <p>Completa el rompecabezas</p>
+        <img id="imagenpantallainicio">
+    </section>
+
+    <!-- este funcionará para empezar y jugar de nuevo, con un innerHTML o un textContent 
+    se corrige -->
+    <section class="contenedor-btnIniciar">
+        <button class="btn-Jugar" id="Empezar">Revolver Puzzle</button>
+        <div class="btn-Sombra"></div>
+    </section>
+
+    <script src="./js/JuegoPuzzle.js"></script>
+</body>
+
+</html>
